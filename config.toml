@@ -1,0 +1,138 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+#  .streamlit/config.toml  —  CyberShield App Configuration
+#  Place this file at:  <your_project>/.streamlit/config.toml
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+# ── 1. THEME ──────────────────────────────────────────────────────────────────
+#  Controls the visual appearance of the entire app.
+#  These values match the dark cyber aesthetic used in interface.py
+
+[theme]
+
+# Main background color of the app
+backgroundColor         = "#070b12"
+
+# Background color for sidebar, input fields, cards
+secondaryBackgroundColor = "#0d1520"
+
+# Default text color throughout the app
+textColor               = "#c9d6e3"
+
+# Accent color used for buttons, sliders, active elements
+primaryColor            = "#00d4ff"
+
+# Font for all UI text.
+# Options: "sans serif" | "serif" | "monospace"
+font                    = "monospace"
+
+
+# ── 2. SERVER ─────────────────────────────────────────────────────────────────
+#  Controls how the Streamlit server runs.
+
+[server]
+
+# Port to serve the app on (default: 8501)
+port                    = 8501
+
+# Set to "0.0.0.0" to allow access from other devices on the network
+# Use "localhost" to restrict to your own machine only
+address                 = "localhost"
+
+# Automatically open the browser when you run the app
+headless                = false        # true = don't auto-open browser (useful for servers/Docker)
+
+# Enable CORS (Cross-Origin Resource Sharing) — keep false for local use
+enableCORS              = false
+
+# Enable XSRF protection (recommended for production)
+enableXsrfProtection    = true
+
+# Max upload file size in MB — increase this for large CSVs like your DataSet.csv
+maxUploadSize           = 500          # default is 200 MB
+
+# Max message size in MB (WebSocket) — increase if you get WebSocket errors
+maxMessageSize          = 500
+
+# How often Streamlit checks for file changes (for hot-reload), in seconds
+fileWatcherType         = "auto"       # "auto" | "watchdog" | "poll" | "none"
+
+
+# ── 3. BROWSER ────────────────────────────────────────────────────────────────
+#  Controls what the browser/client does.
+
+[browser]
+
+# Whether to collect anonymous usage stats (set false for privacy)
+gatherUsageStats        = false
+
+# URL shown in the browser tab (useful when deploying)
+serverAddress           = "localhost"
+
+# Port shown in the browser tab
+serverPort              = 8501
+
+
+# ── 4. RUNNER ─────────────────────────────────────────────────────────────────
+#  Controls how your Python script is executed.
+
+[runner]
+
+# If true, Streamlit installs a magic importer that lets you write
+# "df" on its own line to display it (like a notebook). Set false
+# for cleaner production code.
+magicEnabled            = false
+
+# If true, Streamlit will show a warning when you use deprecated features
+# Recommended: keep true during development
+# postScriptGC           = true        # force garbage collection after each run
+
+
+# ── 5. CLIENT ─────────────────────────────────────────────────────────────────
+#  Controls what the frontend (browser tab) shows.
+
+[client]
+
+# Show a "Made with Streamlit" footer at the bottom
+showErrorDetails        = true         # show full tracebacks in browser (set false in production)
+
+# Whether to display the toolbar (rerun / settings / etc.)
+toolbarMode             = "minimal"    # "auto" | "developer" | "viewer" | "minimal"
+
+
+# ── 6. LOGGER ─────────────────────────────────────────────────────────────────
+#  Controls Python logging output in the terminal.
+
+[logger]
+
+# Logging level for Streamlit's own internal messages
+# Options: "error" | "warning" | "info" | "debug"
+level                   = "warning"    # use "debug" to troubleshoot issues
+
+# Format string for log messages (Python logging format)
+messageFormat           = "%(asctime)s %(levelname)s — %(message)s"
+
+
+# ── 7. GLOBAL ─────────────────────────────────────────────────────────────────
+#  Miscellaneous global settings.
+
+[global]
+
+# Show a deprecation warning in the terminal when deprecated Streamlit
+# functions are used
+showWarningOnDirectExecution = true
+
+# If true, will not show the "Press R to rerun" prompt in terminal
+# unitTestMode           = false
+
+
+# ── 8. DEPRECATION ────────────────────────────────────────────────────────────
+#  Silence specific deprecation warnings you are already aware of.
+
+[deprecation]
+
+# Silence the warning about using st.pyplot() without a figure argument
+showPyplotGlobalUse     = false
+
+# Silence the warning about image encoding changes
+showImageFormat         = false
