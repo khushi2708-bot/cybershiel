@@ -6,7 +6,7 @@
 # Web UI framework
 streamlit>=1.35.0
 
-# Data handling
+# Data handling  
 pandas>=2.0.0
 numpy>=1.26.0
 
