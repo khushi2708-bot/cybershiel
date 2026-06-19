@@ -13,7 +13,7 @@
 # Main background color of the app
 backgroundColor         = "#070b12"
 
-# Background color for sidebar, input fields, cards
+# Background color for sidebar, input fields, cards 
 secondaryBackgroundColor = "#0d1520"
 
 # Default text color throughout the app
